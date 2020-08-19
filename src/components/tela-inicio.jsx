@@ -13,7 +13,7 @@ class TelaInicio extends React.Component {
     super(props);
     this.state = {
       button: true,
-    }
+    };
     this.habilitaBotao = this.habilitaBotao.bind(this);
   }
   habilitaBotao() {
@@ -22,9 +22,8 @@ class TelaInicio extends React.Component {
     if (inputs[0].value !== '' && inputs[1].value !== '') {
       this.setState({
         button: false,
-      })
-    }
-    else {
+      });
+    } else {
       this.setState({
         button: true,
       });
@@ -38,7 +37,7 @@ class TelaInicio extends React.Component {
         <input onChange={this.habilitaBotao} type="text" data-testid="input-gravatar-email" />
         <button disabled={this.state.button} data-testid="btn-play" >Jogar</button>
       </div>
-    )
+    );
   }
 }
 
