@@ -28,9 +28,8 @@ class Ranking extends React.Component {
 
   O ranking deve ser armazenado no navegador através do localStorage.
 
-  Leia a seção "Implementações técnicas" para mais detalhes 
-  
+  Leia a seção "Implementações técnicas" para mais detalhes
+
   */
 
-  export default Ranking;
-  
+export default Ranking;

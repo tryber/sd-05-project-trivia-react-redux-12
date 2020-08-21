@@ -5,6 +5,7 @@ import TelaInicio from "./components/tela-inicio";
 import { BrowserRouter, Switch, Route, Router } from "react-router-dom";
 import TelaConfig from "./components/tela-configuracoes";
 import md5 from "./APIs/Gravatar";
+import Teste from "./APIs/testes-api"
 
 export default function App() {
   return (
@@ -17,7 +18,7 @@ export default function App() {
           <Switch>
             <Route exact path="/src" component={TelaConfig} />
             <Route exact path="/" component={TelaInicio} />
-            <Route path="/" component={() => <h1>Deu ruim</h1>} />
+            <Route path="/testes" component={Teste} />
           </Switch>
         </BrowserRouter>
       </header>
