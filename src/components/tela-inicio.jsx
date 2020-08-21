@@ -64,4 +64,11 @@ class TelaInicio extends React.Component {
   }
 }
 
+/* A pessoa jogadora deve iniciar um jogo
+
+Após clicar no botão "Jogar", a pessoa deve ser redirecionada para a tela do jogo
+Ao clicar no botão "Jogar", um requisição para a API do Trivia deve ser feita para obter o token de jogador
+O token deve ser armazenado na aplicação e enviado em todas as requisições seguintes.
+Salve no LocalStorage o token recebido utilizando a chave token */
+
 export default TelaInicio;

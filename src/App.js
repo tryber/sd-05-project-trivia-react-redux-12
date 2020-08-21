@@ -4,6 +4,7 @@ import "./App.css";
 import TelaInicio from "./components/tela-inicio";
 import { BrowserRouter, Switch, Route, Router } from "react-router-dom";
 import TelaConfig from "./components/tela-configuracoes";
+import md5 from "./APIs/Gravatar";
 
 export default function App() {
   return (
