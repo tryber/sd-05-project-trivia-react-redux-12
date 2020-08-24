@@ -42,3 +42,4 @@ class TelaInicio extends React.Component {
 }
 
 export default TelaInicio;
+// testando
