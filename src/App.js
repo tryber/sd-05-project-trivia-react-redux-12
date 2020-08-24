@@ -1,11 +1,11 @@
-import React from "react";
-import logo from "./trivia.png";
-import "./App.css";
-import TelaInicio from "./components/tela-inicio";
-import { BrowserRouter, Switch, Route, Router } from "react-router-dom";
-import TelaConfig from "./components/tela-configuracoes";
-import md5 from "./APIs/Gravatar";
-import Teste from "./APIs/testes-api"
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import './App.css';
+import TelaInicio from './components/tela-inicio';
+import logo from './trivia.png';
+import TelaConfig from './components/tela-configuracoes';
+/* import md5 from './APIs/Gravatar'; */
+import Teste from './APIs/testes-api';
 
 export default function App() {
   return (
