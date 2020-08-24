@@ -80,6 +80,7 @@ class TelaInicio extends React.Component {
   }
 }
 
+
 /* A pessoa jogadora deve iniciar um jogo
 
 Após clicar no botão "Jogar", a pessoa deve ser redirecionada para a tela do jogo
