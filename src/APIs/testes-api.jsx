@@ -1,6 +1,6 @@
 import React from 'react';
 import Indagation from './question';
-import {getQA, getToken} from './Trivia';
+import { getQA, getToken } from './Trivia';
 
 class teste extends React.Component {
   constructor(props) {
@@ -17,8 +17,8 @@ class teste extends React.Component {
     this.setState({ token: myToken });
   }
   async perguntaNova() {
-    const matheus = await getQA(this.state.token);
-    this.setState({ perguntas: matheus });
+    const newQuest = await getQA(this.state.token);
+    this.setState({ perguntas: newQuest });
   }
   render() {
     return (

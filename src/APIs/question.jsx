@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 
 class question extends React.Component {
   render() {
@@ -40,3 +40,4 @@ class question extends React.Component {
 }
 
 export default question;
+ */
