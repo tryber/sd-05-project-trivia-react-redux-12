@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 function FormularioLog(props) {
@@ -19,17 +20,17 @@ function FormularioLog(props) {
       />
       <br />
       <Link to="/telaDeJogo">
-        <button
-          type="submit"
-          onClick={props.login}
-          disabled={props.button}
-          data-testid="btn-play"
-        >
+        <button type="submit" onClick={props.login} disabled={props.button} data-testid="btn-play">
           Jogar
-          </button>
+        </button>
       </Link>
     </form>
-  )
+  );
 }
+FormularioLog.propTypes = {
+  login: propTypes.func.isRequired,
+  button: propTypes.bool.isRequired,
+  habilitaBotao: propTypes.func.isRequired,
+};
 
 export default FormularioLog;

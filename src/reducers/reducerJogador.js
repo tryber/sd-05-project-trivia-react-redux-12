@@ -7,6 +7,7 @@ const initState = {
   token: '',
   isLoading: false,
   placar: 0,
+  botaoDisable: false,
 };
 
 function ReducerJogador(state = initState, action) {
@@ -16,7 +17,7 @@ function ReducerJogador(state = initState, action) {
         ...state,
         nome: action.user,
         email: action.email,
-        gravatar: grava(action.email) ,
+        gravatar: grava(action.email),
       };
     case Actions.LOADING:
       return {
@@ -28,13 +29,23 @@ function ReducerJogador(state = initState, action) {
         ...state,
         token: action.token,
       };
+    case Actions.PONTOS:
+      return {
+        ...state,
+        placar: state.placar + action.points,
+      };
+    case Actions.BOTAO:
+      return {
+        ...state,
+        botaoDisable: !state.botaoDisable,
+      };
     default:
       return state;
   }
 }
 export default ReducerJogador;
 
-/* 
+/*
 function embaralhar(arr, vezes) {
   const num = arr.length;
   for (let i = 0; i < vezes; i += 1) {

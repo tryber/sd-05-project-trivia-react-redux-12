@@ -1,5 +1,5 @@
 import { getToken } from '../APIs/Trivia';
-
+import calcPontos from '../pontos/points';
 /* function NomedaAção(optional){
   return {
     type: "TIPO DA AÇÃO",
@@ -8,7 +8,9 @@ import { getToken } from '../APIs/Trivia';
 const LOGIN = 'LOGIN';
 const TOKEN = 'TOKEN';
 const LOADING = 'LOADING';
-const Actions = { LOGIN, TOKEN, LOADING };
+const PONTOS = 'PONTOS';
+const BOTAO = 'BOTAO';
+const Actions = { LOGIN, TOKEN, LOADING, PONTOS, BOTAO };
 
 export function login(user, email) {
   return {
@@ -39,5 +41,18 @@ export function GetToken() {
       })
       .then(() => dispatch(loading(false))); // indicação
   });
+}
+
+export function pontos(tempo, dificuldade) {
+  return {
+    type: PONTOS,
+    points: calcPontos(tempo, dificuldade),
+  };
+}
+
+export function botao() {
+  return {
+    type: BOTAO,
+  };
 }
 export default Actions;

@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Questoes from './question'
-
+import Teste from '../APIs/testes-api';
 
 class TelaJogo extends React.Component {
   render() {
@@ -13,10 +12,9 @@ class TelaJogo extends React.Component {
           <h2 data-testid="header-score">{this.props.placar}</h2>
         </div>
         <div>
-          <Questoes />
+          <Teste />
         </div>
       </div>
-
     );
   }
 }
@@ -26,7 +24,6 @@ const mapStateToProps = (state) => ({
   placar: state.reducerJogador.placar,
 });
 export default connect(mapStateToProps, null)(TelaJogo);
-
 
 /* 
 A página deve conter as informações relacionadas à pergunta
