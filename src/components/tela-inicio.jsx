@@ -1,8 +1,10 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import propTypes from 'prop-types';
+import logo from '../trivia.png';
 import { login, GetToken } from '../actions/index';
+import Formulario from './form'
 
 
 /* // O campo de texto para o nome deve possuir o atributo data-testid com o valor input-player-name
@@ -42,7 +44,7 @@ class TelaInicio extends React.Component {
     });
   }
   login(event) {
-    event.preventDefault();
+    /* event.preventDefault(); */
     this.props.setLogin(this.state.user, this.state.email);
     this.props.setToken();
   }
@@ -50,31 +52,15 @@ class TelaInicio extends React.Component {
   render() {
     return (
       <div>
-        <Link to="/src"><button data-testid="btn-settings">Configurações</button></Link>
-        <form>
-          <input
-            placeholder="Nome do Jogador"
-            onChange={this.habilitaBotao}
-            type="text"
-            data-testid="input-player-name"
+        <img src={logo} className="App-logo" alt="logo" />
+        <div>
+          <Link to="/src"><button data-testid="btn-settings">Configurações</button></Link>
+          <Formulario
+            login={this.login}
+            habilitaBotao={this.habilitaBotao}
+            button={this.state.button}
           />
-          <br />
-          <input
-            placeholder="Email do Gravatar"
-            onChange={this.habilitaBotao}
-            type="email"
-            data-testid="input-gravatar-email"
-          />
-          <br />
-          <button
-            type="submit"
-            onClick={this.login}
-            disabled={this.state.button}
-            data-testid="btn-play"
-          >
-            Jogar
-          </button>
-        </form>
+        </div>
       </div>
     );
   }

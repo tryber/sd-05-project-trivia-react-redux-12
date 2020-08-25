@@ -1,4 +1,4 @@
-/* import React from 'react';
+import React from 'react';
 
 class question extends React.Component {
   render() {
@@ -24,12 +24,12 @@ class question extends React.Component {
     }
     return (
       <div>
-        <h1>{this.props.category}</h1>
-        <h1>{`${this.props.question}`}</h1>
+        <h1 data-testid="question-category">{this.props.category}</h1>
+        <h1 data-testid="question-text">{`${this.props.question}`}</h1>
         <ol>
-          <l1>{this.props.correct_answer}</l1>
+          <l1 data-testid="correct-answer">{this.props.correct_answer}</l1>
           {this.props.incorrect_answers.map((res) => (
-            <li key={res}>{res}</li>
+            <li data-testid="correct-answer" key={res}>{res}</li>
           ))}
         </ol>
         <h1>{this.props.type}</h1>
@@ -40,4 +40,4 @@ class question extends React.Component {
 }
 
 export default question;
- */
+

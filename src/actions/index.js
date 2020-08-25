@@ -33,7 +33,10 @@ export function GetToken() {
   return ((dispatch) => {
     dispatch(loading(true)); // indicação
     return getToken()
-      .then((resp) => dispatch(Token(resp)))
+      .then((resp) => {
+        dispatch(Token(resp));
+        localStorage.setItem('token', resp);
+      })
       .then(() => dispatch(loading(false))); // indicação
   });
 }
