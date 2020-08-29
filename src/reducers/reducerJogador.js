@@ -1,4 +1,4 @@
-import Actions from '../actions/index';
+import Actions from '../actions/userAction';
 import grava from '../APIs/crypto'
 
 const initState = {
@@ -32,12 +32,18 @@ function ReducerJogador(state = initState, action) {
     case Actions.PONTOS:
       return {
         ...state,
+        botaoDisable: true,
         placar: state.placar + action.points,
       };
-    case Actions.BOTAO:
+    case Actions.BOTAO_ON:
       return {
         ...state,
-        botaoDisable: !state.botaoDisable,
+        botaoDisable: false,
+      };
+    case Actions.BOTAO_OFF:
+      return {
+        ...state,
+        botaoDisable: true,
       };
     default:
       return state;

@@ -14,7 +14,9 @@ function CalcPontos(tempo, dificuldade) {
       multiplicador = 0;
       break;
   }
-  return (10 + (tempo * multiplicador));
+  console.log(`tempo =>${tempo}`)
+  console.log(`parse =>${parseInt(tempo)}`)
+  return (10 + (parseInt(tempo) * multiplicador));
 }
 
 export default CalcPontos;

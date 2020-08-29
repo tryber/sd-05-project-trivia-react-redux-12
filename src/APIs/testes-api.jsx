@@ -38,7 +38,9 @@ class teste extends React.Component {
 const mapStateToProps = (state) => ({
   token: state.reducerJogador.token,
 });
+
+export default connect(mapStateToProps)(teste);
+
 teste.propTypes = {
   token: propTypes.string.isRequired,
 };
-export default connect(mapStateToProps)(teste);

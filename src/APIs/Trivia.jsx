@@ -5,9 +5,9 @@ export async function getToken() {
 }
 
 export async function getQA(token) {
-  let questions;
-  await fetch(`https://opentdb.com/api.php?amount=5&token=${token}`)
+  return fetch(`https://opentdb.com/api.php?amount=5&token=${token}`)
     .then((question) => question.json())
-    .then((question) => (questions = question));
-  return questions;
+    .then((question) => {
+      console.log(question);
+      return question});
 }
