@@ -7,6 +7,7 @@ export function getToken() {
 export function getQuestions(token) {
   return fetch(`https://opentdb.com/api.php?amount=5&token=${token}`)
     .then((question) => question.json())
-    .then((question) => {
-      return question});
+    .then((question) =>
+      question
+    );
 }
